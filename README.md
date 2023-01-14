@@ -91,7 +91,7 @@ Endpoint: `POST /LAMPAPI/AddContact.php`
 
 Request
 
-- [Contact Object](#contacts-object) without the `id` parameter.
+- [Contact Object](#contact-object) without the `id` parameter.
 
 - Example:
   ```
@@ -163,7 +163,7 @@ Endpoint: `POST /LAMPAPI/UpdateContact.php`
 
 Request
 
-- [Contact Object](#contacts-object)
+- [Contact Object](#contact-object)
 
 - Example:
   ```
@@ -219,10 +219,10 @@ Response
 
 - Parameters:
 
-  | Parameter | Format                                       | Description                                   |
-  | --------- | -------------------------------------------- | --------------------------------------------- |
-  | `results` | array of [Contact Objects](#contacts-object) | Contacts that match the search                |
-  | `error`   | string                                       | Error message or the empty string if no error |
+  | Parameter | Format                                      | Description                                   |
+  | --------- | ------------------------------------------- | --------------------------------------------- |
+  | `results` | array of [Contact Objects](#contact-object) | Contacts that match the search                |
+  | `error`   | string                                      | Error message or the empty string if no error |
 
 - Example:
   ```
