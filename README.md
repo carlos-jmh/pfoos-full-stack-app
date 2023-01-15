@@ -136,7 +136,7 @@ Request
 - Example:
   ```
   {
-    "id": 2,
+    "id": 2
   }
   ```
 
@@ -163,7 +163,7 @@ Endpoint: `POST /LAMPAPI/UpdateContact.php`
 
 Request
 
-- [Contact Object](#contact-object)
+- [Contact Object](#contact-object) without the `userId` parameter
 
 - Example:
   ```
@@ -172,8 +172,7 @@ Request
     "firstName": "John",
     "lastName": "Cena",
     "phone": "5624567891",
-    "email": "stillcantseeme@yahoo.com",
-    "userId": 1
+    "email": "stillcantseeme@yahoo.com"
   }
   ```
 
@@ -219,10 +218,10 @@ Response
 
 - Parameters:
 
-  | Parameter | Format                                      | Description                                   |
-  | --------- | ------------------------------------------- | --------------------------------------------- |
-  | `results` | array of [Contact Objects](#contact-object) | Contacts that match the search                |
-  | `error`   | string                                      | Error message or the empty string if no error |
+  | Parameter | Format                                                                     | Description                                   |
+  | --------- | -------------------------------------------------------------------------- | --------------------------------------------- |
+  | `results` | array of [Contact Objects](#contact-object) without the `userId` parameter | Contacts that match the search                |
+  | `error`   | string                                                                     | Error message or the empty string if no error |
 
 - Example:
   ```
@@ -233,16 +232,14 @@ Response
         "firstName": "Emma",
         "lastName": "Watson",
         "phone": "7988749701",
-        "email": "Hermione@gmail.com",
-        "userId": 2
+        "email": "Hermione@gmail.com"
       },
       {
         "id": 5,
         "firstName": "Michael",
         "lastName": "Jordan",
         "phone": "6217496624",
-        "email": "MJ@gmail.com",
-        "userId": 2
+        "email": "MJ@gmail.com"
       }
     ],
     "error": ""

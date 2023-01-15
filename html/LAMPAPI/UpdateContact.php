@@ -1,7 +1,7 @@
 <?php
 	$inData = getRequestInfo();
 
-	$conn = new mysqli("localhost", "Test", "123", "COP4331");
+	$conn = new mysqli("localhost", "Carl", "APIGUY", "COP4331");
 	if ($conn->connect_error) 
 	{
 		returnWithError( $conn->connect_error );
@@ -9,14 +9,13 @@
 	else
 	{
 		$stmt = $conn->prepare("UPDATE Contacts SET FirstName=?, LastName=?, "
-            . "Phone=?, Email=?, UserID=? WHERE ID=?;");
+            . "Phone=?, Email=? WHERE ID=?;");
 		$stmt->bind_param(
-            "ssssii",
+            "ssssi",
             $inData["firstName"],
             $inData["lastName"], 
             $inData["phone"],
             $inData["email"],
-            $inData["userId"],
             $inData["id"]
         );
 		$stmt->execute();

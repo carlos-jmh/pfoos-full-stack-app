@@ -5,15 +5,16 @@
 	$searchResults = "";
 	$searchCount = 0;
 
-	$conn = new mysqli("localhost", "Test", "123", "COP4331");
+	$conn = new mysqli("localhost", "Carl", "APIGUY", "COP4331");
 	if ($conn->connect_error) 
 	{
 		returnWithError( $conn->connect_error );
 	} 
 	else
 	{
-		$stmt = $conn->prepare("SELECT * from Contacts WHERE (FirstName LIKE ? "
-            . "OR LastName LIKE ? OR Phone LIKE ? OR Email LIKE ?) AND UserID=?");
+		$stmt = $conn->prepare("SELECT ID,FirstName,LastName,Phone,Email " . 
+            "from Contacts WHERE (FirstName LIKE ? OR LastName LIKE ? OR Phone " . 
+            "LIKE ? OR Email LIKE ?) AND UserID=?");
 		$search = "%" . $inData["search"] . "%";
 		$stmt->bind_param(
             "ssssi",
@@ -39,8 +40,7 @@
                 'firstName' => $row["FirstName"],
                 'lastName' => $row["LastName"],
                 'phone' => $row["Phone"],
-                'email' => $row["Email"],
-                'userId' => $row["UserID"]
+                'email' => $row["Email"]
             );
 			$searchResults .= json_encode($searchResult);
 		}
