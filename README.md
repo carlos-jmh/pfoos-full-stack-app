@@ -20,7 +20,7 @@ JSON object used to transfer information about a single contact entry.
 
   | Parameter   | Format | Description          |
   | ----------- | ------ | -------------------- |
-  | `id`        | int    | Contact database key |
+  | `contactId` | int    | Contact database key |
   | `firstName` | string | First name           |
   | `lastName`  | string | Last name            |
   | `phone`     | string | Phone                |
@@ -30,7 +30,7 @@ JSON object used to transfer information about a single contact entry.
 - Example:
   ```
   {
-    "id": 1,
+    "contactId": 1,
     "firstName": "John",
     "lastName": "Cena",
     "phone": "5624567891",
@@ -68,7 +68,7 @@ Response
 
   | Parameter   | Format | Description                                   |
   | ----------- | ------ | --------------------------------------------- |
-  | `id`        | int    | User database key                             |
+  | `userId`    | int    | User database key                             |
   | `firstName` | string | First name                                    |
   | `lastName`  | string | Last name                                     |
   | `error`     | string | Error message or the empty string if no error |
@@ -76,7 +76,7 @@ Response
 - Example:
   ```
   {
-    "id": 1,
+    "userId": 1,
     "firstName": "Rick",
     "lastName": "Astley",
     "error": ""
@@ -91,7 +91,7 @@ Endpoint: `POST /LAMPAPI/AddContact.php`
 
 Request
 
-- [Contact Object](#contact-object) without the `id` parameter.
+- [Contact Object](#contact-object) without the `contactId` parameter.
 
 - Example:
   ```
@@ -129,14 +129,14 @@ Request
 
 - Parameters:
 
-  | Parameter | Format | Description                               |
-  | --------- | ------ | ----------------------------------------- |
-  | `id`      | int    | Contact database key of contact to delete |
+  | Parameter   | Format | Description                               |
+  | ----------- | ------ | ----------------------------------------- |
+  | `contactId` | int    | Contact database key of contact to delete |
 
 - Example:
   ```
   {
-    "id": 2
+    "contactId": 2
   }
   ```
 
@@ -168,7 +168,7 @@ Request
 - Example:
   ```
   {
-    "id": 1,
+    "contactId": 1,
     "firstName": "John",
     "lastName": "Cena",
     "phone": "5624567891",
@@ -228,14 +228,14 @@ Response
   {
     "results": [
       {
-        "id": 4,
+        "contactId": 4,
         "firstName": "Emma",
         "lastName": "Watson",
         "phone": "7988749701",
         "email": "Hermione@gmail.com"
       },
       {
-        "id": 5,
+        "contactId": 5,
         "firstName": "Michael",
         "lastName": "Jordan",
         "phone": "6217496624",

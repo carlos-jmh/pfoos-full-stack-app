@@ -36,7 +36,7 @@
 			}
 			$searchCount++;
             $searchResult = array(
-                'id' => $row["ID"],
+                'contactId' => $row["ID"],
                 'firstName' => $row["FirstName"],
                 'lastName' => $row["LastName"],
                 'phone' => $row["Phone"],

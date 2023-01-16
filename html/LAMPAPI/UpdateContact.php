@@ -16,7 +16,7 @@
             $inData["lastName"], 
             $inData["phone"],
             $inData["email"],
-            $inData["id"]
+            $inData["contactId"]
         );
 		$stmt->execute();
 		$stmt->close();
