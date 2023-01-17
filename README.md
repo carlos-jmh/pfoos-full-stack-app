@@ -55,8 +55,38 @@ Request
   | `password` | string | Login password |
 
 - Example:
+
   ```
   {
+    "login": "RickA",
+    "password": "Troll"
+  }
+  ```
+
+### Register Endpoint
+
+Inserts a new user into the database with the given information.
+
+- Note: As of now, does not prevent duplicate usernames.
+
+Endpoint: `POST /LAMPAPI/Register.php`
+
+Request
+
+- Parameters:
+
+  | Parameter   | Format | Description    |
+  | ----------- | ------ | -------------- |
+  | `firstName` | string | First name     |
+  | `lastName`  | string | Last name      |
+  | `login`     | string | Login username |
+  | `password`  | string | Login password |
+
+- Example:
+  ```
+  {
+    "firstName": "Rick",
+    "lastName": "Astley",
     "login": "RickA",
     "password": "Troll"
   }
@@ -66,19 +96,13 @@ Response
 
 - Parameters:
 
-  | Parameter   | Format | Description                                   |
-  | ----------- | ------ | --------------------------------------------- |
-  | `userId`    | int    | User database key                             |
-  | `firstName` | string | First name                                    |
-  | `lastName`  | string | Last name                                     |
-  | `error`     | string | Error message or the empty string if no error |
+  | Parameter | Format | Description                                   |
+  | --------- | ------ | --------------------------------------------- |
+  | `error`   | string | Error message or the empty string if no error |
 
 - Example:
   ```
   {
-    "userId": 1,
-    "firstName": "Rick",
-    "lastName": "Astley",
     "error": ""
   }
   ```
