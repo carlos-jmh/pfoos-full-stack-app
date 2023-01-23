@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User View</title>
+    <script type="text/javascript" src="./js/code.js"></script>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <div id="loggedInDiv">
+        <span id="uName"></span><br>
+        <button type="button" id="logout" onclick="doLogout();"></button>
+    </div>
+
+    <div id="UIDiv">
+        <br>
+        <input type="text" id="search" placeholder="Name To Search For">
+        <button type="button" id="searchButton" onclick="searchName();"> Search Person </button> <br>
+        <span id="nameSearchResult"></span>
+        <p id="nameList"></p><br>
+
+        <input type="text" name="nameText" placeholder="Name to Add">
+        <button tpye="button" id="addPersonButton" onclick="addPerson();">Add Person </button> <br>
+        <span id="personAddResult"></span>
+    </div>
+
+    <div id="view">
+        <table width="1000px" border="1px">
+            <tr>
+                <td>First Name</td>
+                <td>Last Name</td>
+                <td>Phone</td>
+                <td>Email</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
