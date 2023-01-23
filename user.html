@@ -6,10 +6,20 @@
     <script type="text/javascript" src="./js/code.js"></script>
     <link rel="stylesheet" href="./css/styles.css">
 </head>
-<body>
-    <div id="loggedInDiv">
+<body onload="">
+
+    <!-- Image of logo, company name, display name, logout button-->
+    <div class="contentHeader">
+        <div class="ch-left">
+            <img src="" alt="" height="100" width="100"> 
+            <h1>Company Name</h1>
+        </div>
+
         <span id="uName"></span><br>
-        <button type="button" id="logout" onclick="doLogout();"></button>
+
+        <div class="ch-right">
+            <button type="button" id="logout" onclick="doLogout();">Log out</button>
+        </div>
     </div>
 
     <div id="UIDiv">
@@ -25,14 +35,26 @@
     </div>
 
     <div id="view">
-        <table width="1000px" border="1px">
+        <table width="60%" border="1px">
             <tr>
                 <td>First Name</td>
                 <td>Last Name</td>
                 <td>Phone</td>
                 <td>Email</td>
+                <!-- Have edit and delete buttons next to contacts. 
+                     This is just a remainder, don't leave it here-->
+                <td><button>Edit</button></td>
+                <td><button>Delete</button></td>
             </tr>
+            <!-- We place the results of the table in here -->
+            <div class="tableResult">
+
+            </div>
         </table>
+    </div>
+
+    <div class="contentFooter">
+        Copyright Ⓒ Company Name 2023
     </div>
 </body>
 </html>
