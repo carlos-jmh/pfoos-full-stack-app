@@ -25,36 +25,45 @@
     <div class="UIDiv">
         <br>
         <div class="searchPerson">
-            <input type="text" id="search" placeholder="Name To Search For">
-            <button type="button" id="searchButton" onclick="searchName();"> Search Person </button>
+            <input type="text" class="inStyle" id="search" placeholder="Name To Search For">
+            <button type="button" id="searchButton" class="usrBtn" onclick="searchName();"> Search Person </button>
             <span id="nameSearchResult"></span>
             <p id="nameList"></p>
         </div>
         
         <div class="addPerson">
-            <input type="text" name="nameText" placeholder="Name to Add">
-            <button tpye="button" id="addPersonButton" onclick="addPerson();">Add Person </button> <br>
+            <input type="text" class="inStyle" name="nameText" placeholder="Name to Add">
+            <button tpye="button" id="addPersonButton" class="usrBtn" onclick="addPerson();">Add Person </button> <br>
             <span id="personAddResult"></span>
         </div>
         
     </div>
 
     <div class="view">
-        <table width="60%" border="1px">
-            <tr>
-                <td>First Name</td>
-                <td>Last Name</td>
-                <td>Phone</td>
-                <td>Email</td>
-                <!-- Have edit and delete buttons next to contacts. 
-                     This is just a remainder, don't leave it here-->
-                <td><button>Edit</button></td>
-                <td><button>Delete</button></td>
-            </tr>
-            <!-- We place the results of the table in here -->
-            <div class="tableResult">
+        <table class="styled-table" width="60%" border="1px">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- We place the results of the table in here -->
+                <tr>
+                    <!-- Example of how php should return person -->
+                    <td>John</td>
+                    <td>Smith</td>
+                    <td>Phonads</td>
+                    <td>emna</td>
+                    <td><button class="usrBtn">Edit</button></td>
+                    <td><button class="usrBtn">Delete</button></td>
+                </tr>
+                <div class="tableResult">
 
-            </div>
+                </div>
+            </tbody>            
         </table>
     </div>
 

@@ -258,6 +258,7 @@ li a:hover:not(.active)
 .contentHeader {
     display: flex;
     justify-content: space-between;
+    padding: 0 0 40px; /* Create classes for common code such as this */
 }
 
 .ch-left {
@@ -269,13 +270,39 @@ li a:hover:not(.active)
     display: flex;
     justify-content: center;
     gap: 50px;
+    padding: 0 0 40px;
 }
 
 .view {
     display: flex;
     justify-content: center;
+    padding: 0 0 40px;
 }
 
+.usrBtn {
+    background-color: lightblue;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 25px;
+}
+
+.inStyle {
+    border-radius: 8px;
+    padding: 4px;
+    border: solid;
+    border-width: 2px; 
+    border-color: grey;
+    text-align: center;
+}
+
+.styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
 
 @keyframes GradientBackground {
   0% {
