@@ -250,7 +250,30 @@ li a:hover:not(.active)
 }
 
 .secondBody {
-    background: white
+    background: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.contentHeader {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ch-left {
+    display: flex;
+    gap: 20px;
+}
+
+.UIDiv {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.view {
+    display: flex;
+    justify-content: center;
 }
 
 

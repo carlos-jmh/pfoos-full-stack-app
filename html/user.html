@@ -12,7 +12,7 @@
     <div class="contentHeader">
         <div class="ch-left">
             <img src="./images/logo_transp.png" alt="logo" height="100" width="100"> 
-            <h1>Company Name</h1>
+            <h1>RL Contacts</h1>
         </div>
 
         <span id="uName"></span><br>
@@ -22,19 +22,24 @@
         </div>
     </div>
 
-    <div id="UIDiv">
+    <div class="UIDiv">
         <br>
-        <input type="text" id="search" placeholder="Name To Search For">
-        <button type="button" id="searchButton" onclick="searchName();"> Search Person </button> <br>
-        <span id="nameSearchResult"></span>
-        <p id="nameList"></p><br>
-
-        <input type="text" name="nameText" placeholder="Name to Add">
-        <button tpye="button" id="addPersonButton" onclick="addPerson();">Add Person </button> <br>
-        <span id="personAddResult"></span>
+        <div class="searchPerson">
+            <input type="text" id="search" placeholder="Name To Search For">
+            <button type="button" id="searchButton" onclick="searchName();"> Search Person </button>
+            <span id="nameSearchResult"></span>
+            <p id="nameList"></p>
+        </div>
+        
+        <div class="addPerson">
+            <input type="text" name="nameText" placeholder="Name to Add">
+            <button tpye="button" id="addPersonButton" onclick="addPerson();">Add Person </button> <br>
+            <span id="personAddResult"></span>
+        </div>
+        
     </div>
 
-    <div id="view">
+    <div class="view">
         <table width="60%" border="1px">
             <tr>
                 <td>First Name</td>
@@ -53,7 +58,7 @@
         </table>
     </div>
 
-    <div class="contentFooter">
+    <div id="copyright">
         Copyright Ⓒ RL Contacts 2023
     </div>
 </body>
