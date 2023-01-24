@@ -19,141 +19,6 @@ img
     max-height: 100%;
 }
 
-#title
-{
-    padding: 25px;
-    margin-bottom: 10px;
-    text-align: left;
-    background: black;
-    height: 80px;
-    color: white;
-    font-size: 30px;
-    display: flex;
-}
-
-#copyright
-{
-    text-align: center;
-}
-
-#text_only
-{
-    height: 80px;
-    width: auto;
-}
-
-#wrapper1
-{
-    height: 100px;
-    width: 300px;
-    background: rgba(255, 255, 255, .3);
-    border-radius: 20px;
-    padding: 15px;
-    margin-top: 10px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#loginDiv
-{
-    display: inline-block;
-    padding: 15px;
-    font-size: 20px;
-    text-align: left;
-    height: 100px;
-    width: 150px;
-    justify-content: center;
-}
-
-#loginButtonDiv
-{
-    vertical-align: top;
-    margin-top: 25px;
-    display: inline-block;
-    font-size: 20px;
-    text-align: left;
-    height: 100px;
-    width: 100px;
-
-}
-
-.buttons
-{
-    background-color: white;
-    border: none;
-    border-radius: 10px;
-    color: black;
-    padding: 15px;
-    text-align: center;
-    display: inline-block;
-    font-family: youngserif;
-    font-size: 14px;
-}
-
-.buttons:hover
-{
-	background-color: black;
-	color: white;
-}
-
-#logo_only
-{
-    height: 150px;
-    width: auto;
-    padding: 15px;
-    display: flex;
-    justify-content: center;
-}
-
-#logo_header
-{
-    flex: 50%;
-    height: 80px;
-    width: auto;
-}
-
-#login_link
-{
-    font-size: 14px;
-    text-align: center;
-}
-
-#wrapper2
-{
-    height: 200px;
-    width: 300px;
-    background: rgba(255, 255, 255, .3);
-    border-radius: 20px;
-    margin-top: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 15px;
-}
-
-#createAccDiv
-{
-    display: inline-block;
-    padding: 15px;
-    font-size: 20px;
-    text-align: left;
-    height: 100px;
-    width: 150px;
-    justify-content: center;
-}
-
-
-#createAccButtonDiv
-{
-    vertical-align: top;
-    margin-top: 25px;
-    display: inline-block;
-    font-size: 20px;
-    text-align: left;
-    height: 100px;
-    width: 100px;
-
-}
-
 a
 {
     color: black;
@@ -186,10 +51,33 @@ li a:hover:not(.active)
     background-color: #111;
 }
 
+.buttons
+{
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    color: black;
+    padding: 15px;
+    text-align: center;
+    display: inline-block;
+    font-family: youngserif;
+    font-size: 14px;
+}
+
+.buttons:hover
+{
+	background-color: black;
+	color: white;
+}
+
 .active
 {
     color: black;
     background-color: white;
+}
+
+.secondBody {
+    background: white
 }
 
 #wrapper3
@@ -250,6 +138,121 @@ li a:hover:not(.active)
 	background-color: white;
 	border-radius: 25px;
 }
+
+#logo_only
+{
+    height: 150px;
+    width: auto;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+#logo_header
+{
+    flex: 50%;
+    height: 80px;
+    width: auto;
+}
+
+#login_link
+{
+    font-size: 14px;
+    text-align: center;
+}
+
+#wrapper2
+{
+    height: 200px;
+    width: 300px;
+    background: rgba(255, 255, 255, .3);
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+}
+
+#createAccDiv
+{
+    display: inline-block;
+    padding: 15px;
+    font-size: 20px;
+    text-align: left;
+    height: 100px;
+    width: 150px;
+    justify-content: center;
+}
+
+
+#createAccButtonDiv
+{
+    vertical-align: top;
+    margin-top: 25px;
+    display: inline-block;
+    font-size: 20px;
+    text-align: left;
+    height: 100px;
+    width: 100px;
+}
+
+#title
+{
+    padding: 25px;
+    margin-bottom: 10px;
+    text-align: left;
+    background: black;
+    height: 80px;
+    color: white;
+    font-size: 30px;
+    display: flex;
+}
+
+#copyright
+{
+    text-align: center;
+}
+
+#text_only
+{
+    height: 80px;
+    width: auto;
+}
+
+#wrapper1
+{
+    height: 100px;
+    width: 300px;
+    background: rgba(255, 255, 255, .3);
+    border-radius: 20px;
+    padding: 15px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#loginDiv
+{
+    display: inline-block;
+    padding: 15px;
+    font-size: 20px;
+    text-align: left;
+    height: 100px;
+    width: 150px;
+    justify-content: center;
+}
+
+#loginButtonDiv
+{
+    vertical-align: top;
+    margin-top: 25px;
+    display: inline-block;
+    font-size: 20px;
+    text-align: left;
+    height: 100px;
+    width: 100px;
+}
+
 @keyframes GradientBackground {
   0% {
 	background-position: 0% 50%;
