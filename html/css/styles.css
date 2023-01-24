@@ -1,0 +1,266 @@
+@font-face
+{
+  src: url(fonts/YoungSerif-Regular.otf);
+  font-family: youngserif;
+
+}
+
+body
+{
+  background: linear-gradient(45deg, #36008D, #00C9B8, #FCD200, #FE5E54, #FFB3C1);
+  background-size: 1000% 1000%;
+  animation: GradientBackground 10s ease infinite;
+  font-family: youngserif;
+}
+
+img
+{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#title
+{
+    padding: 25px;
+    margin-bottom: 10px;
+    text-align: left;
+    background: black;
+    height: 80px;
+    color: white;
+    font-size: 30px;
+    display: flex;
+}
+
+#copyright
+{
+    text-align: center;
+}
+
+#text_only
+{
+    height: 80px;
+    width: auto;
+}
+
+#wrapper1
+{
+    height: 100px;
+    width: 300px;
+    background: rgba(255, 255, 255, .3);
+    border-radius: 20px;
+    padding: 15px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#loginDiv
+{
+    display: inline-block;
+    padding: 15px;
+    font-size: 20px;
+    text-align: left;
+    height: 100px;
+    width: 150px;
+    justify-content: center;
+}
+
+#loginButtonDiv
+{
+    vertical-align: top;
+    margin-top: 25px;
+    display: inline-block;
+    font-size: 20px;
+    text-align: left;
+    height: 100px;
+    width: 100px;
+
+}
+
+.buttons
+{
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    color: black;
+    padding: 15px;
+    text-align: center;
+    display: inline-block;
+    font-family: youngserif;
+    font-size: 14px;
+}
+
+.buttons:hover
+{
+	background-color: black;
+	color: white;
+}
+
+#logo_only
+{
+    height: 150px;
+    width: auto;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+#logo_header
+{
+    flex: 50%;
+    height: 80px;
+    width: auto;
+}
+
+#login_link
+{
+    font-size: 14px;
+    text-align: center;
+}
+
+#wrapper2
+{
+    height: 200px;
+    width: 300px;
+    background: rgba(255, 255, 255, .3);
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+}
+
+#createAccDiv
+{
+    display: inline-block;
+    padding: 15px;
+    font-size: 20px;
+    text-align: left;
+    height: 100px;
+    width: 150px;
+    justify-content: center;
+}
+
+
+#createAccButtonDiv
+{
+    vertical-align: top;
+    margin-top: 25px;
+    display: inline-block;
+    font-size: 20px;
+    text-align: left;
+    height: 100px;
+    width: 100px;
+
+}
+
+a
+{
+    color: black;
+}
+
+ul
+{
+    list-style-type:none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+}
+
+li
+{
+    float: left;
+}
+
+li a
+{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10px 12px;
+}
+
+li a:hover:not(.active)
+{
+    background-color: #111;
+}
+
+.active
+{
+    color: black;
+    background-color: white;
+}
+
+#wrapper3
+{
+    margin-top: 20px;
+    position: relative;
+
+}
+
+#top_right
+{
+    font-size: 40px;
+    color: black;
+    position: absolute;
+    top: 8px;
+    right: 16px;
+}
+
+#main_logo
+{
+    height: 200px;
+    width: auto;
+    padding: 10px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+#stock_image
+{
+    width: 45%;
+    height: 100%;
+}
+
+#main_text
+{
+    width: 45%;
+    height: 100%;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    background: rgba(255, 255, 255, .3);
+    margin-right: 5%;
+}
+
+#main_inner_text
+{
+    margin: 5%;
+    margin-top: 11%;
+    font-size: 20px;
+}
+
+#get_started
+{
+	margin: 5%;
+	padding: 5%;
+	font-size: 40px;
+	color: black;
+	background-color: white;
+	border-radius: 25px;
+}
+@keyframes GradientBackground {
+  0% {
+	background-position: 0% 50%;
+  }
+
+  50% {
+	background-position: 100% 50%;
+  }
+
+  100% {
+	background-position: 0% 50%;
+  }
+};
