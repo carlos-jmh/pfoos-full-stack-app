@@ -5,6 +5,7 @@
 - [API Documentation](#api-documentation)
   - [Contact Object](#contact-object)
   - [Login Endpoint](#login-endpoint)
+  - [Register Endpoint](#register-endpoint)
   - [Add Contact Endpoint](#add-contact-endpoint)
   - [Delete Contact Endpoint](#delete-contact-endpoint)
   - [Update Contact Endpoint](#update-contact-endpoint)
