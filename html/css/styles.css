@@ -51,35 +51,6 @@ li a:hover:not(.active)
     background-color: #111;
 }
 
-.buttons
-{
-    background-color: white;
-    border: none;
-    border-radius: 10px;
-    color: black;
-    padding: 15px;
-    text-align: center;
-    display: inline-block;
-    font-family: youngserif;
-    font-size: 14px;
-}
-
-.buttons:hover
-{
-	background-color: black;
-	color: white;
-}
-
-.active
-{
-    color: black;
-    background-color: white;
-}
-
-.secondBody {
-    background: white
-}
-
 #wrapper3
 {
     margin-top: 20px;
@@ -252,6 +223,36 @@ li a:hover:not(.active)
     height: 100px;
     width: 100px;
 }
+
+.buttons
+{
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    color: black;
+    padding: 15px;
+    text-align: center;
+    display: inline-block;
+    font-family: youngserif;
+    font-size: 14px;
+}
+
+.buttons:hover
+{
+	background-color: black;
+	color: white;
+}
+
+.active
+{
+    color: black;
+    background-color: white;
+}
+
+.secondBody {
+    background: white
+}
+
 
 @keyframes GradientBackground {
   0% {
