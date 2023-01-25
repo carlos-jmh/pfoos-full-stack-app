@@ -6,7 +6,7 @@
     <script type="text/javascript" src="./js/code.js"></script>
     <link rel="stylesheet" href="./css/styles.css">
 </head>
-<body class="secondBody" onload="">
+<body class="secondBody font" onload="search()">
 
     <!-- Image of logo, company name, display name, logout button-->
     <div class="contentHeader">
@@ -18,7 +18,7 @@
         <span id="uName"></span><br>
 
         <div class="ch-right">
-            <button type="button" id="logout" onclick="doLogout();">Log out</button>
+            <button type="button" class="usrBtn" id="logout" onclick="doLogout();">Log out</button>
         </div>
     </div>
 
@@ -52,13 +52,11 @@
             <tbody>
                 <!-- We place the results of the table in here -->
                 <tr>
-                    <!-- Example of how php should return person -->
+                    <!-- Example of how php should return. Add edit and delete buttons -->
                     <td>John</td>
                     <td>Smith</td>
                     <td>Phonads</td>
                     <td>emna</td>
-                    <td><button class="usrBtn">Edit</button></td>
-                    <td><button class="usrBtn">Delete</button></td>
                 </tr>
                 <div class="tableResult">
 

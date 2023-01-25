@@ -1,3 +1,10 @@
+:root {
+    --main-color: 
+    --text-color: 
+    --seconday-color:
+    --third-color: 
+}
+
 @font-face
 {
   src: url(fonts/YoungSerif-Regular.otf);
@@ -256,14 +263,23 @@ li a:hover:not(.active)
 }
 
 .contentHeader {
+    background-color: #009879;
     display: flex;
     justify-content: space-between;
-    padding: 0 0 40px; /* Create classes for common code such as this */
+    align-items: center;
+    padding: 0 0 20px;
+    margin: 0 0 40px; /* Create classes for common code such as this */
 }
 
 .ch-left {
     display: flex;
     gap: 20px;
+    padding: 10px 10px;
+    align-items: center;
+}
+
+.ch-right {
+    padding: 0 20px;
 }
 
 .UIDiv {
@@ -280,7 +296,7 @@ li a:hover:not(.active)
 }
 
 .usrBtn {
-    background-color: lightblue;
+    background-color: #0a5345;
     color: white;
     border: none;
     border-radius: 8px;
@@ -296,12 +312,41 @@ li a:hover:not(.active)
     text-align: center;
 }
 
+/* The colors can be changed */
 .styled-table {
     border-collapse: collapse;
     margin: 25px 0;
     font-size: 0.9em;
     min-width: 400px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.styled-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+
+.styled-table th, .styled-table td {
+    padding: 12px 15px;
+    border: 0;
+}
+
+.styled-table tbody tr {
+    border-bottom: thin solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+.styled-table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
 }
 
 @keyframes GradientBackground {
