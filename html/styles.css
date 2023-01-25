@@ -23,11 +23,9 @@ img
 {
     padding: 25px;
     margin-bottom: 10px;
-    text-align: left;
     background: black;
     height: 80px;
     color: white;
-    font-size: 30px;
     display: flex;
 }
 
@@ -99,7 +97,7 @@ img
 #logo_only
 {
     height: 150px;
-    width: auto;
+    width: 25%;
     padding: 15px;
     display: flex;
     justify-content: center;
@@ -107,9 +105,8 @@ img
 
 #logo_header
 {
-    flex: 50%;
     height: 80px;
-    width: auto;
+    width: 25%;
 }
 
 #login_link
@@ -162,7 +159,7 @@ ul
 {
     list-style-type:none;
     margin: 0;
-    padding: 0;
+    padding: 15px;
     overflow: hidden;
     background-color: black;
 }
@@ -198,15 +195,6 @@ li a:hover:not(.active)
 
 }
 
-#top_right
-{
-    font-size: 40px;
-    color: black;
-    position: absolute;
-    top: 8px;
-    right: 16px;
-}
-
 #main_logo
 {
     height: 200px;
@@ -223,21 +211,27 @@ li a:hover:not(.active)
     height: 100%;
 }
 
-#main_text
+#main_text_wrapper
 {
     width: 45%;
     height: 100%;
     position: absolute;
+    background: rgba(255, 255, 255, .3);
     bottom: 0px;
     right: 0px;
-    background: rgba(255, 255, 255, .3);
     margin-right: 5%;
+}
+
+#main_header
+{
+    margin: 5%;
+    font-size: 40px;
+    color: black;
 }
 
 #main_inner_text
 {
     margin: 5%;
-    margin-top: 11%;
     font-size: 20px;
 }
 
