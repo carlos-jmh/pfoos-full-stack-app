@@ -18,54 +18,56 @@
         <span id="uName"></span><br>
 
         <div class="ch-right">
-            <button type="button" class="usrBtn" id="logout" onclick="doLogout();">Log out</button>
+            <button type="button" class="logout" id="logout" onclick="doLogout();">Log out</button>
         </div>
     </div>
 
-    <div class="UIDiv">
-        <br>
-        <div class="searchPerson">
-            <input type="text" class="inStyle" id="search" placeholder="Name To Search For">
-            <button type="button" id="searchButton" class="usrBtn" onclick="searchName();"> Search Person </button>
-            <span id="nameSearchResult"></span>
-            <p id="nameList"></p>
+    <div class="content">
+        <div class="UIDiv">
+            <br>
+            <div class="searchPerson">
+                <input type="text" class="inStyle" id="search" placeholder="Name To Search For">
+                <button type="button" id="searchButton" class="usrBtn" onclick="searchName();"> Search Person </button>
+                <span id="nameSearchResult"></span>
+                <p id="nameList"></p>
+            </div>
+            
+            <div class="addPerson">
+                <input type="text" class="inStyle" name="nameText" placeholder="Name to Add">
+                <button tpye="button" id="addPersonButton" class="usrBtn" onclick="addPerson();">Add Person </button> <br>
+                <span id="personAddResult"></span>
+            </div>
+            
         </div>
-        
-        <div class="addPerson">
-            <input type="text" class="inStyle" name="nameText" placeholder="Name to Add">
-            <button tpye="button" id="addPersonButton" class="usrBtn" onclick="addPerson();">Add Person </button> <br>
-            <span id="personAddResult"></span>
+    
+        <div class="view">
+            <table class="styled-table" width="60%" border="1px">
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Phone Number</th>
+                        <th>Email</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>John</td>
+                        <td>Smith</td>
+                        <td>954-593-1896</td>
+                        <td>asdsa@gmail.com</td>
+                        <td><button class="rowBtn">edit</button></td>
+                        <td><button class="rowBtn">delete</button></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-        
     </div>
+   
 
-    <div class="view">
-        <table class="styled-table" width="60%" border="1px">
-            <thead>
-                <tr>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Phone</th>
-                    <th>Email</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- We place the results of the table in here -->
-                <tr>
-                    <!-- Example of how php should return. Add edit and delete buttons -->
-                    <td>John</td>
-                    <td>Smith</td>
-                    <td>Phonads</td>
-                    <td>emna</td>
-                </tr>
-                <div class="tableResult">
-
-                </div>
-            </tbody>            
-        </table>
-    </div>
-
-    <div id="copyright">
+    <div class="copyright">
         Copyright Ⓒ RL Contacts 2023
     </div>
 </body>

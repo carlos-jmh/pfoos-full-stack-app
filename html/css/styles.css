@@ -1,8 +1,8 @@
 :root {
-    --main-color: 
-    --text-color: 
-    --seconday-color:
-    --third-color: 
+    --main-color: #7286D3;
+    --secondary-color: #34385e;
+    --third-color: #E5E0FF; 
+    --text-color: #FFFFFF;
 }
 
 @font-face
@@ -11,10 +11,13 @@
   font-family: youngserif;
 
 }
+html, body {
+    height: 100%;
+}
 
 body
 {
-  background: linear-gradient(45deg, #36008D, #00C9B8, #FCD200, #FE5E54, #FFB3C1);
+  /*background: linear-gradient(45deg, #36008D, #00C9B8, #FCD200, #FE5E54, #FFB3C1);*/
   background-size: 1000% 1000%;
   animation: GradientBackground 10s ease infinite;
   font-family: youngserif;
@@ -189,6 +192,8 @@ li a:hover:not(.active)
 #copyright
 {
     text-align: center;
+    background-color: var(--main-color);
+    color: var(--text-color);
 }
 
 #text_only
@@ -257,18 +262,39 @@ li a:hover:not(.active)
 }
 
 .secondBody {
-    background: white;
+    background-color: white;
+    color: var(--text-color);
     display: flex;
     flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+/* Create content div that takes up the whole space available */
+.content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-color);
+    color: var(--text-color);
+    height: 50px;
+    margin: 10px 0 0;
 }
 
 .contentHeader {
-    background-color: #009879;
+    height: 100px;
+    background-color: var(--main-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 0 20px;
-    margin: 0 0 40px; /* Create classes for common code such as this */
+    padding: 10px 10px;
+    margin: 0 0 30px; /* Create classes for common code such as this */
 }
 
 .ch-left {
@@ -295,12 +321,30 @@ li a:hover:not(.active)
     padding: 0 0 40px;
 }
 
+.logout:hover {
+    padding: 12px 30px;
+}
+
+.logout {
+    background-color: var(--secondary-color);
+    border: solid;
+    border-color: var(--secondary-color);
+    border-width: 2px;
+    color: var(--text-color);
+    border-radius: 8px;
+    padding: 8px 25px;
+}
+
 .usrBtn {
-    background-color: #0a5345;
-    color: white;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
     border: none;
     border-radius: 8px;
     padding: 8px 25px;
+}
+
+.usrBtn:hover {
+    padding: 12px 30px;
 }
 
 .inStyle {
@@ -315,14 +359,13 @@ li a:hover:not(.active)
 /* The colors can be changed */
 .styled-table {
     border-collapse: collapse;
-    margin: 25px 0;
     font-size: 0.9em;
     min-width: 400px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
 .styled-table thead tr {
-    background-color: #009879;
+    background-color: var(--main-color);
     color: #ffffff;
     text-align: left;
 }
@@ -330,6 +373,10 @@ li a:hover:not(.active)
 .styled-table th, .styled-table td {
     padding: 12px 15px;
     border: 0;
+}
+
+.styled-table td {
+    color: var(--main-color);
 }
 
 .styled-table tbody tr {
@@ -341,12 +388,24 @@ li a:hover:not(.active)
 }
 
 .styled-table tbody tr:last-of-type {
-    border-bottom: 2px solid #009879;
+    border-bottom: 2px solid var(--seconday-color);
 }
 
 .styled-table tbody tr.active-row {
     font-weight: bold;
-    color: #009879;
+    color: var(--main-color);
+}
+
+.rowBtn {
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+    border-radius: 8px;
+    color: var(--text-color);
+    padding: 8px 15px;
+}
+
+.rowBtn:hover {
+    padding: 12px 20px;
 }
 
 @keyframes GradientBackground {
