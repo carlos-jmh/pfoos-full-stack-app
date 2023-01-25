@@ -55,18 +55,18 @@ img
 #loginDiv
 {
     display: inline-block;
-    padding: 15px;
     font-size: 20px;
     text-align: left;
     height: 100px;
     width: 150px;
-    justify-content: center;
+    margin-top: 15px;
+    margin-right: 15px;
 }
 
 #loginButtonDiv
 {
+    margin-top: 15px;
     vertical-align: top;
-    margin-top: 25px;
     display: inline-block;
     font-size: 20px;
     text-align: left;
@@ -97,10 +97,10 @@ img
 #logo_only
 {
     height: 150px;
-    width: 25%;
-    padding: 15px;
-    display: flex;
-    justify-content: center;
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 #logo_header
@@ -130,23 +130,24 @@ img
 #createAccDiv
 {
     display: inline-block;
-    padding: 15px;
     font-size: 20px;
     text-align: left;
     height: 100px;
     width: 150px;
     justify-content: center;
+    margin-top: 15px;
+    margin-right: 15px;
 }
 
 #createAccButtonDiv
 {
     vertical-align: top;
-    margin-top: 25px;
     display: inline-block;
     font-size: 20px;
     text-align: left;
     height: 100px;
     width: 100px;
+    margin-top: 15px;
 
 }
 
