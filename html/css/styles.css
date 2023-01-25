@@ -1,3 +1,10 @@
+:root {
+    --main-color: #7286D3;
+    --secondary-color: #34385e;
+    --third-color: #E5E0FF; 
+    --text-color: #FFFFFF;
+}
+
 @font-face
 {
   src: url(fonts/YoungSerif-Regular.otf);
