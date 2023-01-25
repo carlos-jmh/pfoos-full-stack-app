@@ -192,8 +192,6 @@ li a:hover:not(.active)
 #copyright
 {
     text-align: center;
-    background-color: var(--main-color);
-    color: var(--text-color);
 }
 
 #text_only
