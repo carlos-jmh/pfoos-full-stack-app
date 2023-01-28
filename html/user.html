@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>RL Contacts - User View</title>
-    <script type="text/javascript" src="./js/code.js"></script>
+    <script type="text/javascript" src="./js/apiCalls.js"></script>
     <link rel="stylesheet" href="./css/styles.css">
 </head>
-<body class="secondBody font" onload="search()">
+<body class="secondBody font" onload="searchContacts()">
 
     <!-- Image of logo, company name, display name, logout button-->
     <div class="contentHeader">
@@ -26,8 +26,8 @@
         <div class="UIDiv">
             <br>
             <div class="searchPerson">
-                <input type="text" class="inStyle" id="search" placeholder="Name To Search For">
-                <button type="button" id="searchButton" class="usrBtn" onclick="searchName();"> Search Person </button>
+                <input type="text" class="inStyle" id="searchText" placeholder="Name To Search For">
+                <button type="button" id="searchButton" class="usrBtn" onclick="searchContacts();"> Search Person </button>
                 <span id="nameSearchResult"></span>
                 <p id="nameList"></p>
             </div>
