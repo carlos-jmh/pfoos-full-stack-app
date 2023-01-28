@@ -3,7 +3,8 @@
 <head>
 	<meta charset="UTF-8">
     <title>RL Contacts - Login</title>
-	<script type="text/javascript" src="./js/code.js"></script>
+	<script type="text/javascript" src="./js/apiCalls.js"></script>
+    <script type="text/javascript" src="./js/md5.js"></script>
     <link href="./css/styles.css" rel = "stylesheet">
 </head>
 <body>
@@ -32,7 +33,7 @@
             <input type="password" id="loginPassword" placeholder="Password" />
         </div>
         <div id="loginButtonDiv">
-            <button type= "button" id="loginButton" class="buttons">Log
+            <button type= "button" id="loginButton" class="buttons" onclick="doLogin()">Log
                 in</button>
             <span id="loginResult"></span>
         </div>
