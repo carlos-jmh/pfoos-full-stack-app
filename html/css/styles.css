@@ -14,10 +14,12 @@
 
 body
 {
-  background: linear-gradient(45deg, #36008D, #00C9B8, #FCD200, #FE5E54, #FFB3C1);
+  background: linear-gradient(45deg, #7286D3, #34385E, #E5E0FF);
   background-size: 1000% 1000%;
   animation: GradientBackground 10s ease infinite;
   font-family: youngserif;
+  margin: 0px;
+  padding: 0px;
 }
 
 img
@@ -113,7 +115,6 @@ li a:hover:not(.active)
     text-align: left;
     height: 100px;
     width: 100px;
-
 }
 
 #logo_only
@@ -171,14 +172,12 @@ li a:hover:not(.active)
     text-align: left;
     height: 100px;
     width: 100px;
-
 }
 
 #wrapper3
 {
     margin-top: 20px;
     position: relative;
-
 }
 
 #top_right
@@ -206,7 +205,7 @@ li a:hover:not(.active)
     height: 100%;
 }
 
-#main_text
+#main_text_wrapper
 {
     width: 45%;
     height: 100%;
@@ -215,6 +214,13 @@ li a:hover:not(.active)
     right: 0px;
     background: rgba(255, 255, 255, .3);
     margin-right: 5%;
+}
+
+#main_header
+{
+    margin: 5%;
+    font-size: 40px;
+    color: black;
 }
 
 #main_inner_text
