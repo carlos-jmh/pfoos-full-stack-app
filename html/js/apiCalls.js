@@ -99,11 +99,15 @@ function searchContacts() {
 						let btn = document.createElement("button");
 						btn.classList.add("rowBtn");
 
-						if (j == 5)
+						if (j == 5) {
 							btn.innerHTML = "edit";
-						else
+							//btn.addEventListener("click", editContact);
+						}
+						else {
 							btn.innerHTML = "delete";
-
+							//btn.addEventListener("click", deleteContact);
+						}
+							
 						td.appendChild(btn);
 					}
 					// TODO: Cleaner way to write this.
