@@ -52,6 +52,10 @@ function doLogin() {
 
 // TODO: Display the result of this operation in the html.
 function searchContacts() {
+
+	// Clear HTML content first.
+	document.getElementById("placeData").innerHTML = "";
+
 	const searchText = document.getElementById("searchText").value;
 	
 	loadData();
@@ -77,6 +81,50 @@ function searchContacts() {
 			const contacts = data.results;
 			console.log("Contact(s) has been retrieved");
 			console.log(contacts);
+
+			// Place the contact results in the table.
+			let place = document.getElementById("placeData");
+
+			for (let i = 0; i < contacts.length; i++) {
+				// Create row.
+				let row = document.createElement("tr");
+
+				// Create td's to append to row.
+				for (let j = 1; j <= 6; j++) {
+					let td = document.createElement("td");
+
+					// Create td with button inside.
+					if (j == 5 || j == 6) {
+						let btn = document.createElement("button");
+						btn.classList.add("rowBtn");
+
+						if (j == 5)
+							btn.innerHTML = "edit";
+						else
+							btn.innerHTML = "delete";
+
+						td.appendChild(btn);
+					}
+					else {
+						if (j == 1) {
+							td.innerHTML = contacts[i].firstName;
+						}
+						else if (j == 2) {
+							td.innerHTML = contacts[i].lastName;
+						}
+						else if (j == 3) {
+							td.innerHTML = contacts[i].phone;
+						}
+						else {
+							td.innerHTML = contacts[i].email;
+						}
+					}
+					row.appendChild(td);
+				}
+				
+				place.appendChild(row);
+			};
+
 			return contacts;
 		})
 		.catch(error => {

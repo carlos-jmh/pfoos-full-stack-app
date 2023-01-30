@@ -351,6 +351,11 @@ li a:hover:not(.active)
     padding: 12px 30px;
 }
 
+.secondBody {
+    background: 0;
+    background-color: white;
+}
+
 .inStyle {
     border-radius: 8px;
     padding: 4px;
@@ -380,7 +385,7 @@ li a:hover:not(.active)
 }
 
 .styled-table td {
-    color: var(--main-color);
+    color: var(--secondary-color);
 }
 
 .styled-table tbody tr {
