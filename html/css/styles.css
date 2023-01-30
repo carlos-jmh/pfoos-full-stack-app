@@ -433,6 +433,14 @@ li a:hover:not(.active)
 
 .Popup button {
     border-radius: 6px;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    border-color: var(--secondary-color);
+    padding: 8px 16px;
+}
+
+.Popup button:hover {
+    padding: 12px 30px;
 }
 
 .Popup .close {

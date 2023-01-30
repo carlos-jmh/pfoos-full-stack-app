@@ -139,24 +139,29 @@ function searchContacts() {
 }
 
 function openEditPopup() {
-	let popup = document.getElementById("editPop");
+	let popup = document.getElementById("deletePop");
+	popup.classList.remove("openPop");
 
+	popup = document.getElementById("editPop");
 	popup.classList.add("openPop");
 }
 
 function openDeletePopup() {
-	let popup = document.getElementById("deletePop");
+	let popup = document.getElementById("editPop");
+	popup.classList.remove("openPop");
 
+	popup = document.getElementById("deletePop");
 	popup.classList.add("openPop");
 }
 
 function closeEditPopup() {
-	let popup = document.getElementById("editPop");
+
+	popup = document.getElementById("editPop");
 	popup.classList.remove("openPop");
 }
 
 function closeDeletePopup() {
-	let popup = document.getElementById("deletePop");
+	popup = document.getElementById("deletePop");
 	popup.classList.remove("openPop");
 }
 
