@@ -82,9 +82,10 @@ function searchContacts() {
 			console.log("Contact(s) has been retrieved");
 			console.log(contacts);
 
-			// Place the contact results in the table.
+			// Get the location of the table body.
 			let place = document.getElementById("placeData");
 
+			// Loop through array of contacts.
 			for (let i = 0; i < contacts.length; i++) {
 				// Create row.
 				let row = document.createElement("tr");
@@ -105,6 +106,7 @@ function searchContacts() {
 
 						td.appendChild(btn);
 					}
+					// TODO: Cleaner way to write this.
 					else {
 						if (j == 1) {
 							td.innerHTML = contacts[i].firstName;
