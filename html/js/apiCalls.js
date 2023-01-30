@@ -82,60 +82,64 @@ function searchContacts() {
 			console.log("Contact(s) has been retrieved");
 			console.log(contacts);
 
-			// Get the location of the table body.
-			let place = document.getElementById("placeData");
-
-			// Loop through array of contacts.
-			for (let i = 0; i < contacts.length; i++) {
-				// Create row.
-				let row = document.createElement("tr");
-
-				// Create td's to append to row.
-				for (let j = 1; j <= 6; j++) {
-					let td = document.createElement("td");
-
-					// Create td with button inside.
-					if (j == 5 || j == 6) {
-						let btn = document.createElement("button");
-						btn.classList.add("rowBtn");
-
-						if (j == 5) {
-							btn.innerHTML = "edit";
-							btn.onclick = openEditPopup;
-						}
-						else {
-							btn.innerHTML = "delete";
-							btn.onclick = openDeletePopup;
-						}
-							
-						td.appendChild(btn);
-					}
-					// TODO: Cleaner way to write this.
-					else {
-						if (j == 1) {
-							td.innerHTML = contacts[i].firstName;
-						}
-						else if (j == 2) {
-							td.innerHTML = contacts[i].lastName;
-						}
-						else if (j == 3) {
-							td.innerHTML = contacts[i].phone;
-						}
-						else {
-							td.innerHTML = contacts[i].email;
-						}
-					}
-					row.appendChild(td);
-				}
-				
-				place.appendChild(row);
-			};
-
-			return contacts;
+			drawTable(contacts);
 		})
 		.catch(error => {
 			console.log('error:', error)
 		});
+}
+
+function drawTable(contacts) {
+	// Get the location of the table body.
+	let place = document.getElementById("placeData");
+
+	// Loop through array of contacts.
+	for (let i = 0; i < contacts.length; i++) {
+		// Create row.
+		let row = document.createElement("tr");
+
+		// Create td's to append to row.
+		for (let j = 1; j <= 6; j++) {
+			let td = document.createElement("td");
+
+			// Create td with button inside.
+			if (j == 5 || j == 6) {
+				let btn = document.createElement("button");
+				btn.classList.add("rowBtn");
+
+				if (j == 5) {
+					btn.innerHTML = "edit";
+					btn.onclick = openEditPopup;
+				}
+				else {
+					btn.innerHTML = "delete";
+					btn.onclick = openDeletePopup;
+				}
+					
+				td.appendChild(btn);
+			}
+			// TODO: Cleaner way to write this.
+			else {
+				if (j == 1) {
+					td.innerHTML = contacts[i].firstName;
+				}
+				else if (j == 2) {
+					td.innerHTML = contacts[i].lastName;
+				}
+				else if (j == 3) {
+					td.innerHTML = contacts[i].phone;
+				}
+				else {
+					td.innerHTML = contacts[i].email;
+				}
+			}
+			row.appendChild(td);
+		}
+		
+		place.appendChild(row);
+	};
+
+	return contacts;
 }
 
 // Delete contact we clicked on. 
