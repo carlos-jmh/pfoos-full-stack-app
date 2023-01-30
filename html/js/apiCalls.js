@@ -138,6 +138,17 @@ function searchContacts() {
 		});
 }
 
+// Delete contact we clicked on. 
+// Add contact with new information.
+// Search again.
+function editContact() {
+
+}
+
+function deleteContact() {
+
+}
+
 function openEditPopup() {
 	let popup = document.getElementById("deletePop");
 	popup.classList.remove("openPop");
