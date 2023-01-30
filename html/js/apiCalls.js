@@ -101,11 +101,11 @@ function searchContacts() {
 
 						if (j == 5) {
 							btn.innerHTML = "edit";
-							//btn.addEventListener("click", editContact);
+							btn.onclick = openEditPopup;
 						}
 						else {
 							btn.innerHTML = "delete";
-							//btn.addEventListener("click", deleteContact);
+							btn.onclick = openDeletePopup;
 						}
 							
 						td.appendChild(btn);
@@ -136,6 +136,28 @@ function searchContacts() {
 		.catch(error => {
 			console.log('error:', error)
 		});
+}
+
+function openEditPopup() {
+	let popup = document.getElementById("editPop");
+
+	popup.classList.add("openPop");
+}
+
+function openDeletePopup() {
+	let popup = document.getElementById("deletePop");
+
+	popup.classList.add("openPop");
+}
+
+function closeEditPopup() {
+	let popup = document.getElementById("editPop");
+	popup.classList.remove("openPop");
+}
+
+function closeDeletePopup() {
+	let popup = document.getElementById("deletePop");
+	popup.classList.remove("openPop");
 }
 
 function doLogout() {
