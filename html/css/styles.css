@@ -31,11 +31,16 @@ a
     color: black;
 }
 
+a:link
+{
+    text-decoration: none;
+}
+
 ul
 {
     list-style-type:none;
     margin: 0;
-    padding: 0;
+    padding: 15px;
     overflow: hidden;
     background-color: black;
 }
@@ -55,18 +60,16 @@ li a
 
 li a:hover:not(.active)
 {
-    background-color: #111;
+    background-color: var(--main-color);
 }
 
 #title
 {
     padding: 25px;
     margin-bottom: 10px;
-    text-align: left;
     background: black;
     height: 80px;
     color: white;
-    font-size: 30px;
     display: flex;
 }
 
@@ -96,18 +99,18 @@ li a:hover:not(.active)
 #loginDiv
 {
     display: inline-block;
-    padding: 15px;
     font-size: 20px;
     text-align: left;
     height: 100px;
     width: 150px;
-    justify-content: center;
+    margin-top: 15px;
+    margin-right: 15px;
 }
 
 #loginButtonDiv
 {
     vertical-align: top;
-    margin-top: 25px;
+    margin-top: 15px;
     display: inline-block;
     font-size: 20px;
     text-align: left;
@@ -119,17 +122,16 @@ li a:hover:not(.active)
 #logo_only
 {
     height: 150px;
-    width: auto;
-    padding: 15px;
-    display: flex;
-    justify-content: center;
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 #logo_header
 {
-    flex: 50%;
     height: 80px;
-    width: auto;
+    width: 25%;
 }
 
 #login_link
@@ -153,25 +155,25 @@ li a:hover:not(.active)
 #createAccDiv
 {
     display: inline-block;
-    padding: 15px;
     font-size: 20px;
     text-align: left;
     height: 100px;
     width: 150px;
     justify-content: center;
+    margin-top: 15px;
+    margin-right: 15px;
 }
 
 
 #createAccButtonDiv
 {
     vertical-align: top;
-    margin-top: 25px;
     display: inline-block;
     font-size: 20px;
     text-align: left;
     height: 100px;
     width: 100px;
-
+    margin-top: 15px;
 }
 
 #wrapper3
@@ -179,15 +181,6 @@ li a:hover:not(.active)
     margin-top: 20px;
     position: relative;
 
-}
-
-#top_right
-{
-    font-size: 40px;
-    color: black;
-    position: absolute;
-    top: 8px;
-    right: 16px;
 }
 
 #main_logo
@@ -206,7 +199,7 @@ li a:hover:not(.active)
     height: 100%;
 }
 
-#main_text
+#main_text_wrapper
 {
     width: 45%;
     height: 100%;
@@ -217,10 +210,16 @@ li a:hover:not(.active)
     margin-right: 5%;
 }
 
+#main_header
+{
+    margin: 5%;
+    font-size: 40px;
+    color: black;
+}
+
 #main_inner_text
 {
     margin: 5%;
-    margin-top: 11%;
     font-size: 20px;
 }
 
