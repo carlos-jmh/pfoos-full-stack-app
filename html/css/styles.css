@@ -203,12 +203,13 @@ li a:hover:not(.active)
 
 #main_logo
 {
-    height: 200px;
+    height: 100px;
     width: auto;
     padding: 10px;
     margin-top: 20px;
     display: flex;
     justify-content: center;
+    background-color: black;
 }
 
 #stock_image
