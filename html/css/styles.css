@@ -1,7 +1,7 @@
 :root {
     --main-color: #7286D3;
     --secondary-color: #34385e;
-    --third-color: #E5E0FF; 
+    --third-color: #E5E0FF;
     --text-color: #FFFFFF;
 }
 
@@ -14,7 +14,7 @@
 
 body
 {
-  background: linear-gradient(45deg, #36008D, #00C9B8, #FCD200, #FE5E54, #FFB3C1);
+  background: linear-gradient(45deg, #7286D3, #34385E, #E5E0FF);
   background-size: 1000% 1000%;
   animation: GradientBackground 10s ease infinite;
   font-family: youngserif;
