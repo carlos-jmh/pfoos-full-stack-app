@@ -109,11 +109,15 @@ function drawTable(contacts) {
 
 				if (j == 5) {
 					btn.innerHTML = "edit";
-					btn.onclick = openEditPopup;
+					btn.onclick = () => {
+						openEditPopup(contacts[i].contactId);
+					};
 				}
 				else {
 					btn.innerHTML = "delete";
-					btn.onclick = openDeletePopup;
+					btn.onclick = () => {
+						openDeletePopup(contacts[i].contactId);
+					}
 				}
 					
 				td.appendChild(btn);
@@ -145,27 +149,46 @@ function drawTable(contacts) {
 // Delete contact we clicked on. 
 // Add contact with new information.
 // Search again.
-function editContact() {
+function editContact(e) {
+	getId(e);
+}
 
+function getId(element) {
 }
 
 function deleteContact() {
 
 }
 
-function openEditPopup() {
+function openEditPopup(e) {
+	console.log(e);
 	closeDeletePopup();
 	closeAddPopup();
+	
+	// Add button passing element.
 
 	let popup = document.getElementById("editPop");
+
+	let btn = popup.getElementsByClassName("call");
+	btn.onclick = () => {
+		editContact(e);
+	}
+
 	popup.classList.add("openPop");
 }
 
-function openDeletePopup() {
+function openDeletePopup(e) {
+	console.log(e);
 	closeEditPopup();
 	closeAddPopup();
 
 	let popup = document.getElementById("deletePop");
+
+	let btn = popup.getElementsByClassName("call");
+	btn.onclick = () => {
+		deleteContact(e);
+	};
+
 	popup.classList.add("openPop");
 }
 
