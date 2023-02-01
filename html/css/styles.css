@@ -457,10 +457,19 @@ li a:hover:not(.active)
 }
 
 .Popup .close {
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
     align-self: flex-end;
-    margin: 10px 0;
+    margin: 10px 0px 0px;
+    padding: 5px 0px;
+}
+
+.Popup p {
+    align-self: flex-start;
+    gap: 0px;
+    margin: 1px;
 }
 
 #editPop {
