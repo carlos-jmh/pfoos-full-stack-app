@@ -398,7 +398,7 @@ li a:hover:not(.active)
     border-bottom: thin solid #dddddd;
 }
 
-.styled-table tbody tr:nth-of-type(even) {
+.styled-table tbody {
     background-color: #f3f3f3;
 }
 
