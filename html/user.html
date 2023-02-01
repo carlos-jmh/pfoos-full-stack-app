@@ -33,7 +33,6 @@
             </div>
             
             <div class="addPerson">
-                <input type="text" class="inStyle" name="nameText" placeholder="Name to Add">
                 <button tpye="button" id="addPersonButton" class="usrBtn" onclick="openAddPopup();">Add Person </button> <br>
                 <span id="personAddResult"></span>
             </div>
@@ -57,9 +56,13 @@
                          and add a new contact with the inputted information.-->
                     <div class="Popup" id="editPop">
                         <button type="button" class="close" onclick="closeEditPopup()">X</button><br/>
+                        <p>First Name</p>
                         <input type="text" id="fname" placeholder="new first name"><br/>
+                        <p>Last Name</p>
                         <input type="text" id="lname" placeholder="new last name"><br/>
+                        <p>Phone Number</p>
                         <input type="text" id="phone" placeholder="new phone number"><br/>
+                        <p>Email Address</p>
                         <input type="text" id="email" placeholder="new email address"><br/>
                         <button type="button" onclick="editContact()">Submit</button>
                     </div>
@@ -70,9 +73,13 @@
                     </div>
                     <div class="Popup" id="addPop">
                         <button type="button" class="close" onclick="closeAddPopup()">X</button>
+                        <p>First Name</p>
                         <input type="text" placeholder="first name"><br/>
+                        <p>Last Name</p>
                         <input type="text" placeholder="last name"><br/>
+                        <p>Phone Number</p>
                         <input type="text" placeholder="phone number"><br/>
+                        <p>Email Address</p>
                         <input type="text" placeholder="email address"><br/>
                         <button type="button" onclick="addPerson()">Submit</button>
                     </div>
