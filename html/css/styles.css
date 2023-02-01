@@ -463,12 +463,12 @@ li a:hover:not(.active)
     margin: 10px 0;
 }
 
-#editPop {
+#editPop #addPop {
     display: flex;
     flex-direction: column;
 }
 
-#editPop input {
+#editPop #addPop input {
     border-radius: 6px;
 }
 

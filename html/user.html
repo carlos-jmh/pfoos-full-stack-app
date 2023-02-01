@@ -68,6 +68,14 @@
                         <button type="button" onclick="deleteContact()">Delete</button>
                         <button type="button" onclick="closeDeletePopup()">Don't delete</button>
                     </div>
+                    <div class="Popup" id="addPop">
+                        <button type="button" class="close" onclick="closeEditPopup()">X</button>
+                        <input type="text" placeholder="first name"><br/>
+                        <input type="text" placeholder="last name"><br/>
+                        <input type="text" placeholder="phone number"><br/>
+                        <input type="text" placeholder="email address"><br/>
+                        <button type="button" onclick="editContact()">Submit</button>
+                    </div>
                 </tbody>
             </table>
         </div>

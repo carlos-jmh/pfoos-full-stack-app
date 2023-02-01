@@ -180,6 +180,13 @@ function closeDeletePopup() {
 	popup.classList.remove("openPop");
 }
 
+function openAddPopup() {
+}
+
+function closeAddPopup() {
+
+}
+
 function doLogout() {
 	userId = -1;
 	firstName = "";
