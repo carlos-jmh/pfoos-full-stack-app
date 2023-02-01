@@ -463,14 +463,22 @@ li a:hover:not(.active)
     margin: 10px 0;
 }
 
-#editPop #addPop {
+#editPop {
     display: flex;
     flex-direction: column;
 }
 
-#editPop #addPop input {
+#addPop {
+    display: flex;
+    flex-direction: column;
+}
+
+#editPop input {
     border-radius: 6px;
 }
+
+#addPop input {
+    border-radius: 6px;}
 
 .openPop {
     visibility: visible;

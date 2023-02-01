@@ -154,37 +154,42 @@ function deleteContact() {
 }
 
 function openEditPopup() {
-	let popup = document.getElementById("deletePop");
-	popup.classList.remove("openPop");
+	closeDeletePopup();
+	closeAddPopup();
 
-	popup = document.getElementById("editPop");
+	let popup = document.getElementById("editPop");
 	popup.classList.add("openPop");
 }
 
 function openDeletePopup() {
-	let popup = document.getElementById("editPop");
-	popup.classList.remove("openPop");
+	closeEditPopup();
+	closeAddPopup();
 
-	popup = document.getElementById("deletePop");
+	let popup = document.getElementById("deletePop");
+	popup.classList.add("openPop");
+}
+
+function openAddPopup() {
+	closeEditPopup();
+	closeDeletePopup();
+
+	let popup = document.getElementById("addPop");
 	popup.classList.add("openPop");
 }
 
 function closeEditPopup() {
-
-	popup = document.getElementById("editPop");
+	let popup = document.getElementById("editPop");
 	popup.classList.remove("openPop");
 }
 
 function closeDeletePopup() {
-	popup = document.getElementById("deletePop");
+	let popup = document.getElementById("deletePop");
 	popup.classList.remove("openPop");
 }
 
-function openAddPopup() {
-}
-
 function closeAddPopup() {
-
+	let popup = document.getElementById("addPop");
+	popup.classList.remove("openPop");
 }
 
 function doLogout() {

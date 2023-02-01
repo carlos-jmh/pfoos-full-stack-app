@@ -34,7 +34,7 @@
             
             <div class="addPerson">
                 <input type="text" class="inStyle" name="nameText" placeholder="Name to Add">
-                <button tpye="button" id="addPersonButton" class="usrBtn" onclick="addPerson();">Add Person </button> <br>
+                <button tpye="button" id="addPersonButton" class="usrBtn" onclick="openAddPopup();">Add Person </button> <br>
                 <span id="personAddResult"></span>
             </div>
             
@@ -56,7 +56,7 @@
                     <!-- Idea, this submission will just call delete on the current contact, 
                          and add a new contact with the inputted information.-->
                     <div class="Popup" id="editPop">
-                        <button type="button" class="close" onclick="closeEditPopup()">X</button>
+                        <button type="button" class="close" onclick="closeEditPopup()">X</button><br/>
                         <input type="text" id="fname" placeholder="new first name"><br/>
                         <input type="text" id="lname" placeholder="new last name"><br/>
                         <input type="text" id="phone" placeholder="new phone number"><br/>
@@ -69,12 +69,12 @@
                         <button type="button" onclick="closeDeletePopup()">Don't delete</button>
                     </div>
                     <div class="Popup" id="addPop">
-                        <button type="button" class="close" onclick="closeEditPopup()">X</button>
+                        <button type="button" class="close" onclick="closeAddPopup()">X</button>
                         <input type="text" placeholder="first name"><br/>
                         <input type="text" placeholder="last name"><br/>
                         <input type="text" placeholder="phone number"><br/>
                         <input type="text" placeholder="email address"><br/>
-                        <button type="button" onclick="editContact()">Submit</button>
+                        <button type="button" onclick="addPerson()">Submit</button>
                     </div>
                 </tbody>
             </table>
