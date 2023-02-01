@@ -18,6 +18,7 @@ body
   background-size: 1000% 1000%;
   animation: GradientBackground 10s ease infinite;
   font-family: youngserif;
+  margin: 0px;
 }
 
 img
@@ -89,6 +90,12 @@ li a:hover:not(.active)
     height: 80px;
     color: white;
     display: flex;
+    justify-content: space-between;
+}
+
+.left {
+    display: flex;
+    flex-direction: row;
 }
 
 #copyright
