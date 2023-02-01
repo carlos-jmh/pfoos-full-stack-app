@@ -207,6 +207,10 @@ li a:hover:not(.active)
     position: relative;
 }
 
+#wrapper3 a:hover {
+    background-color: var(--main-color);
+}
+
 #main_logo
 {
     height: 100px;
