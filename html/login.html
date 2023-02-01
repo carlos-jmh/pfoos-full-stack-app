@@ -6,6 +6,15 @@
 	<script type="text/javascript" src="./js/apiCalls.js"></script>
     <script type="text/javascript" src="./js/md5.js"></script>
     <link href="./css/styles.css" rel = "stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        corePlugins: {
+            preflight: false,
+        }
+      }
+    </script>
 </head>
 <body>
     <div id = "title">
@@ -26,18 +35,16 @@
         </ul>
     </div>
 
-    <div id= "wrapper1">
-        Enter login information here.
-        <div id="loginDiv">
-            Username
-            <input type="text" id="loginName" placeholder="Username" /><br />
-            Password
+    <div id="wrapper1" class="w-72 p-6 rounded-2xl">
+        Enter login information here:
+        <div class="m-3 flex flex-col gap-1">
+            <label for="loginName">Username</label>
+            <input type="text" id="loginName" placeholder="Username" />
+            <label for="loginPassword" class="mt-2">Password</label>
             <input type="password" id="loginPassword" placeholder="Password" />
-        </div>
-        <div id="loginButtonDiv">
-            <button type= "button" id="loginButton" class="buttons" onclick="doLogin()">Log
+            <button type= "button" id="loginButton" class="buttons mt-2" onclick="doLogin()">Log
                 in</button>
-            <span id="loginResult"></span>
+            <span id="loginResult" class="mt-2"></span>
         </div>
     </div>
 
@@ -46,7 +53,7 @@
     </div>
 
     <div id= "login_link">
-        Don't have an account yet? <a href="signup.html" class="links">Click here</a>
+        Don't have an account yet? <a href="signup.html" class="links">Sign up</a>
     </div>
 </body>
 </html>

@@ -5,6 +5,15 @@
     <title>RL Contacts - Sign Up</title>
 	<script type="text/javascript" src="./js/code.js"></script>
     <link href="./css/styles.css" rel = "stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        corePlugins: {
+            preflight: false,
+        }
+      }
+    </script>
 </head>
 <body>
     <div id = "title">
@@ -25,23 +34,21 @@
         </ul>
     </div>
 
-    <div id= "wrapper2">
-        Enter new account details here.
-        <div id="createAccDiv">
-            Email
-            <input type="text" id="email" placeholder="Email" /><br />
-            Username
-            <input type="text" id="loginName" placeholder="Username" /><br />
-            Password
+    <div id="wrapper1" class="w-72 p-6 rounded-2xl">
+        Enter new account details here:
+        <div class="m-3 flex flex-col gap-1">
+            <label for="email">Email</label>
+            <input type="text" id="email" placeholder="Email" />
+            <label for="loginName" class="mt-2">Username</label>
+            <input type="text" id="loginName" placeholder="Username" />
+            <label for="loginPassword" class="mt-2">Password</label>
             <input type="password" id="loginPassword" placeholder="Password" />
-            First Name
-            <input type="text" id="firstname" placeholder="First Name" /><br />
-            Last Name
+            <label for="firstName" class="mt-2">First Name</label>
+            <input type="text" id="firstname" placeholder="First Name" />
+            <label for="lastName" class="mt-2">Last Name</label>
             <input type="text" id="lastname" placeholder="Last Name" />
-        </div>
-        <div id="createAccButtonDiv">
-            <button type= "button" id="createAccButton" class="buttons">Create account</button>
-            <span id="loginResult"></span>
+            <button type= "button" id="createAccButton" class="buttons mt-2">Create account</button>
+            <span id="loginResult" class="mt-2"></span>
         </div>
     </div>
 
@@ -50,7 +57,7 @@
     </div>
 
     <div id= "login_link">
-        Already have an account? <a href="login.html" class="links">Click here</a>
+        Already have an account? <a href="login.html" class="links">Log in</a>
     </div>
 </body>
 </html>
