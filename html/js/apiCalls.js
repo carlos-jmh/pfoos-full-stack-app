@@ -60,6 +60,7 @@ function searchContacts() {
 	
 	loadData();
 	if (userId <= 0) {
+		window.location.href = "login.html";
 		return;
 	}
 
@@ -242,4 +243,44 @@ function loadData() {
 	} else {
 		console.log("No user found");
 	}
+}
+
+function doRegisterUser() {
+	// const registerEmail = document.getElementById("registerEmail").value;
+	const registerLoginName = document.getElementById("registerLoginName").value;
+	const registerPassword = document.getElementById("registerPassword").value;
+	// const registerHashedPassword = md5(password);
+	const registerFirstName = document.getElementById("registerFirstName").value;
+	const registerLastName = document.getElementById("registerLastName").value;
+
+	document.getElementById("registerResult").innerHTML = "";
+
+	const request = {
+		firstName: registerFirstName,
+		lastName: registerLastName,
+		login: registerLoginName,
+		password: registerPassword
+	};
+
+	const url = urlBase + '/Register.' + extension;
+	
+	const xhr = new XMLHttpRequest();
+	xhr.open("POST", url, true);
+	xhr.setRequestHeader("Content-type", "application/json; charset=UTF-8");
+	try
+	{
+		xhr.onreadystatechange = function() 
+		{
+			if (this.readyState == 4 && this.status == 200) 
+			{
+				document.getElementById("registerResult").innerHTML = "User has been added";
+			}
+		};
+		xhr.send(JSON.stringify(request));
+	}
+	catch(err)
+	{
+		document.getElementById("registerResult").innerHTML = err.message;
+	}
+	
 }
