@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
     <title>RL Contacts - Sign Up</title>
-	<script type="text/javascript" src="./js/code.js"></script>
+	<script type="text/javascript" src="./js/apiCalls.js"></script>
     <link href="./css/styles.css" rel = "stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -35,17 +35,17 @@
         Enter new account details here:
         <div class="m-3 flex flex-col gap-1">
             <label for="email">Email</label>
-            <input type="text" id="email" placeholder="Email" />
+            <input type="text" id="registerEmail" placeholder="Email" />
             <label for="loginName" class="mt-2">Username</label>
-            <input type="text" id="loginName" placeholder="Username" />
+            <input type="text" id="registerLoginName" placeholder="Username" />
             <label for="loginPassword" class="mt-2">Password</label>
-            <input type="password" id="loginPassword" placeholder="Password" />
+            <input type="password" id="registerPassword" placeholder="Password" />
             <label for="firstName" class="mt-2">First Name</label>
-            <input type="text" id="firstname" placeholder="First Name" />
+            <input type="text" id="registerFirstName" placeholder="First Name" />
             <label for="lastName" class="mt-2">Last Name</label>
-            <input type="text" id="lastname" placeholder="Last Name" />
-            <button type= "button" id="createAccButton" class="buttons mt-2">Create account</button>
-            <span id="loginResult" class="mt-2"></span>
+            <input type="text" id="registerLastName" placeholder="Last Name" />
+            <button type= "button" id="createAccButton" class="buttons mt-2" onclick="doRegisterUser()">Create account</button>
+            <span id="registerResult" class="mt-2"></span>
         </div>
     </div>
 
