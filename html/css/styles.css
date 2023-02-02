@@ -18,7 +18,7 @@ body
   background-size: 1000% 1000%;
   animation: GradientBackground 10s ease infinite;
   font-family: youngserif;
-  margin: 0;
+  margin: 0px;
 }
 
 img
@@ -87,22 +87,19 @@ li a:hover:not(.active)
 
 #title
 {
-    padding: 25px;
-    margin-bottom: 10px;
+    padding: 5px;
     background: black;
     color: white;
+}
+
+.left {
     display: flex;
+    flex-direction: row;
 }
 
 #copyright
 {
     text-align: center;
-}
-
-#text_only
-{
-    height: 80px;
-    width: auto;
 }
 
 #wrapper1
@@ -124,40 +121,10 @@ li a:hover:not(.active)
     margin-bottom: 15px;
 }
 
-#logo_header
-{
-    height: 80px;
-    width: 25%;
-}
-
 #login_link
 {
     font-size: 14px;
     text-align: center;
-}
-
-#wrapper2
-{
-    height: 250px;
-    width: 300px;
-    background: rgba(255, 255, 255, .3);
-    border-radius: 20px;
-    margin-top: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 15px;
-}
-
-
-#createAccButtonDiv
-{
-    vertical-align: top;
-    display: inline-block;
-    font-size: 20px;
-    text-align: left;
-    height: 100px;
-    width: 100px;
-    margin-top: 15px;
 }
 
 #main_logo
@@ -344,7 +311,7 @@ li a:hover:not(.active)
     border-bottom: thin solid #dddddd;
 }
 
-.styled-table tbody tr:nth-of-type(even) {
+.styled-table tbody {
     background-color: #f3f3f3;
 }
 
@@ -368,6 +335,72 @@ li a:hover:not(.active)
 .rowBtn:hover {
     padding: 12px 20px;
 }
+
+.Popup {
+    width: 400px;
+    background-color: var(--main-color);
+    border-radius: 6px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+}
+
+.Popup button {
+    border-radius: 6px;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    border-color: var(--secondary-color);
+    padding: 8px 16px;
+}
+
+.Popup button:hover {
+    padding: 12px 30px;
+}
+
+.Popup .close {
+    width: 30px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-end;
+    margin: 10px 0px 0px;
+    padding: 5px 0px;
+}
+
+.Popup p {
+    align-self: flex-start;
+    gap: 0px;
+    margin: 1px;
+}
+
+#editPop {
+    display: flex;
+    flex-direction: column;
+}
+
+#addPop {
+    display: flex;
+    flex-direction: column;
+}
+
+#editPop input {
+    border-radius: 6px;
+}
+
+#addPop input {
+    border-radius: 6px;}
+
+.openPop {
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+}
+
 
 @keyframes GradientBackground {
   0% {
