@@ -160,39 +160,19 @@ li a:hover:not(.active)
     margin-top: 15px;
 }
 
-#wrapper3
-{
-    margin-top: 20px;
-    position: relative;
-
-}
-
 #main_logo
 {
     height: 100px;
     width: auto;
     padding: 10px;
-    margin-top: 20px;
     display: flex;
     justify-content: center;
     background-color: black;
 }
 
-#stock_image
-{
-    width: 45%;
-    height: 100%;
-}
-
 #main_text_wrapper
 {
-    width: 45%;
-    height: 100%;
-    position: absolute;
-    bottom: 0px;
-    right: 0px;
     background: rgba(255, 255, 255, .3);
-    margin-right: 5%;
 }
 
 #main_header
