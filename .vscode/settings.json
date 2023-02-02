@@ -1,0 +1,7 @@
+{
+    "[html]": {
+      "inlineFold.regex": "class=\"([\\w\\s. -:\\[\\]]+)\"",
+      "inlineFold.regexFlags": "g",
+      "inlineFold.regexGroup": 1
+    }
+  }
