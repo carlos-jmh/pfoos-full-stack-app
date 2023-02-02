@@ -52,6 +52,10 @@ function doLogin() {
 
 // TODO: Display the result of this operation in the html.
 function searchContacts() {
+
+	// Clear HTML content first.
+	document.getElementById("placeData").innerHTML = "";
+
 	const searchText = document.getElementById("searchText").value;
 	
 	loadData();
@@ -77,11 +81,138 @@ function searchContacts() {
 			const contacts = data.results;
 			console.log("Contact(s) has been retrieved");
 			console.log(contacts);
-			return contacts;
+
+			drawTable(contacts);
 		})
 		.catch(error => {
 			console.log('error:', error)
 		});
+}
+
+function drawTable(contacts) {
+	// Get the location of the table body.
+	let place = document.getElementById("placeData");
+
+	// Loop through array of contacts.
+	for (let i = 0; i < contacts.length; i++) {
+		// Create row.
+		let row = document.createElement("tr");
+
+		// Create td's to append to row.
+		for (let j = 1; j <= 6; j++) {
+			let td = document.createElement("td");
+
+			// Create td with button inside.
+			if (j == 5 || j == 6) {
+				let btn = document.createElement("button");
+				btn.classList.add("rowBtn");
+
+				if (j == 5) {
+					btn.innerHTML = "edit";
+					btn.onclick = () => {
+						openEditPopup(contacts[i].contactId);
+					};
+				}
+				else {
+					btn.innerHTML = "delete";
+					btn.onclick = () => {
+						openDeletePopup(contacts[i].contactId);
+					}
+				}
+					
+				td.appendChild(btn);
+			}
+			// TODO: Cleaner way to write this.
+			else {
+				if (j == 1) {
+					td.innerHTML = contacts[i].firstName;
+				}
+				else if (j == 2) {
+					td.innerHTML = contacts[i].lastName;
+				}
+				else if (j == 3) {
+					td.innerHTML = contacts[i].phone;
+				}
+				else {
+					td.innerHTML = contacts[i].email;
+				}
+			}
+			row.appendChild(td);
+		}
+		
+		place.appendChild(row);
+	};
+
+	return contacts;
+}
+
+// Delete contact we clicked on. 
+// Add contact with new information.
+// Search again.
+function editContact(e) {
+	getId(e);
+}
+
+function getId(element) {
+}
+
+function deleteContact() {
+
+}
+
+function openEditPopup(e) {
+	console.log(e);
+	closeDeletePopup();
+	closeAddPopup();
+	
+	// Add button passing element.
+
+	let popup = document.getElementById("editPop");
+
+	let btn = popup.getElementsByClassName("call");
+	btn.onclick = () => {
+		editContact(e);
+	}
+
+	popup.classList.add("openPop");
+}
+
+function openDeletePopup(e) {
+	console.log(e);
+	closeEditPopup();
+	closeAddPopup();
+
+	let popup = document.getElementById("deletePop");
+
+	let btn = popup.getElementsByClassName("call");
+	btn.onclick = () => {
+		deleteContact(e);
+	};
+
+	popup.classList.add("openPop");
+}
+
+function openAddPopup() {
+	closeEditPopup();
+	closeDeletePopup();
+
+	let popup = document.getElementById("addPop");
+	popup.classList.add("openPop");
+}
+
+function closeEditPopup() {
+	let popup = document.getElementById("editPop");
+	popup.classList.remove("openPop");
+}
+
+function closeDeletePopup() {
+	let popup = document.getElementById("deletePop");
+	popup.classList.remove("openPop");
+}
+
+function closeAddPopup() {
+	let popup = document.getElementById("addPop");
+	popup.classList.remove("openPop");
 }
 
 function doLogout() {
