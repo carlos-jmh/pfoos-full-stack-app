@@ -5,17 +5,23 @@
     <title>RL Contacts - About</title>
 	<script type="text/javascript" src="./js/code.js"></script>
     <link href="./css/styles.css" rel = "stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        corePlugins: {
+            preflight: false,
+        }
+      }
+    </script>
 </head>
 <body>
-    <div id = "title">
-        <div id = "text_only">
-            <img src="./images/text_only.png" alt="logo" />
+    <div id = "title" class="flex flex-row flex-wrap items-center gap-3 justify-center">
+        <div class="flex flex-row flex-wrap justify-center">
+            <img src="./images/text_only.png" alt="logo" class="max-h-16"/>
+            <img src="./images/logo_transp.png" alt="logo" class="max-h-16"/>
         </div>
-
-        <div id = "logo_header">
-            <img src="./images/logo_transp.png" alt="logo" />
-        </div>
-        <ul>
+        <ul class="flex flex-row gap-1 flex-wrap grow justify-center">
             <li><a href="index.html">Home</a></li>
             <li><a href="login.html">Log in</a></li>
             <li><a href="signup.html">Sign up</a></li>

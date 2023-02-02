@@ -16,14 +16,12 @@
     </script>
 </head>
 <body>
-    <div id = "title">
-        <div id = "text_only">
-            <img src="./images/text_only.png" alt="logo" />
+    <div id = "title" class="flex flex-row flex-wrap items-center gap-3 justify-center">
+        <div class="flex flex-row flex-wrap justify-center">
+            <img src="./images/text_only.png" alt="logo" class="max-h-16"/>
+            <img src="./images/logo_transp.png" alt="logo" class="max-h-16"/>
         </div>
-        <div id = "logo_header">
-            <img src="./images/logo_transp.png" alt="logo" />
-        </div>
-        <ul>
+        <ul class="flex flex-row gap-1 flex-wrap grow justify-center">
             <li><a class="active" href="index.html">Home</a></li>
             <li><a href="login.html">Log in</a></li>
             <li><a href="signup.html">Sign up</a></li>
@@ -35,10 +33,10 @@
 
 <div class="flex flex-row flex-wrap lg:flex-nowrap flex-wrap-reverse gap-6 p-6">
     <div class="basis-full lg:basis-1/2">
-        <img src="./images/landing_img.jpg" alt="stock image"/>
+        <img src="./images/landing_img.jpg" alt="stock image" class="rounded-2xl"/>
     </div>
 
-    <div id ="main_text_wrapper" class="basis-full lg:basis-1/2">
+    <div id ="main_text_wrapper" class="basis-full lg:basis-1/2 rounded-2xl">
         <div id ="main_header">
         Your contacts, managed with simplicity.
         </div>
