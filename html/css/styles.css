@@ -9,14 +9,13 @@
 {
   src: url(fonts/YoungSerif-Regular.otf);
   font-family: youngserif;
-
 }
 
 body
 {
   background: linear-gradient(45deg, #7286D3, #34385E, #E5E0FF);
   background-size: 1000% 1000%;
-  animation: GradientBackground 10s ease infinite;
+  animation: GradientBackground 30s ease infinite;
   font-family: youngserif;
   margin: 0px;
 }
