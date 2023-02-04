@@ -147,22 +147,8 @@ function drawTable(contacts) {
 	return contacts;
 }
 
-// Delete contact we clicked on. 
-// Add contact with new information.
-// Search again.
-function editContact(e) {
-	getId(e);
-}
-
-function getId(element) {
-}
-
-function deleteContact() {
-
-}
-
-function openEditPopup(e) {
-	console.log(e);
+function openEditPopup(contactId) {
+	console.log(contactId);
 	closeDeletePopup();
 	closeAddPopup();
 	
@@ -170,24 +156,26 @@ function openEditPopup(e) {
 
 	let popup = document.getElementById("editPop");
 
-	let btn = popup.getElementsByClassName("call");
+	let btn = document.getElementById("submitEditPopup");
 	btn.onclick = () => {
-		editContact(e);
+		updateContact(contactId);
+		closeEditPopup();
 	}
 
 	popup.classList.add("openPop");
 }
 
-function openDeletePopup(e) {
-	console.log(e);
+function openDeletePopup(contactId) {
+	console.log(contactId);
 	closeEditPopup();
 	closeAddPopup();
 
 	let popup = document.getElementById("deletePop");
 
-	let btn = popup.getElementsByClassName("call");
+	let btn = document.getElementById("submitDeletePopup");
 	btn.onclick = () => {
-		deleteContact(e);
+		deleteContact(contactId);
+		closeDeletePopup();
 	};
 
 	popup.classList.add("openPop");
@@ -283,4 +271,95 @@ function doRegisterUser() {
 		document.getElementById("registerResult").innerHTML = err.message;
 	}
 	
+}
+
+function addContact() {
+	const addFirstName = document.getElementById("addFirstName").value;
+	const addLastName = document.getElementById("addLastName").value;
+	const addPhoneNumber = document.getElementById("addPhoneNumber").value;
+	const addEmail = document.getElementById("addEmail").value;
+
+	document.getElementById("personAddResult").innerHTML = "";
+
+	const request = {
+		firstName: addFirstName,
+		lastName: addLastName,
+		phone: addPhoneNumber,
+		email: addEmail,
+		userId: userId
+	};
+
+	const url = urlBase + '/AddContact.' + extension;
+
+	const xhr = new XMLHttpRequest();
+	xhr.open("POST", url, true);
+	xhr.setRequestHeader("Content-type", "application/json; charset=UTF-8");
+	try {
+		xhr.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				document.getElementById("personAddResult").innerHTML = "Contact has been added";
+				searchContacts();
+			}
+		};
+		xhr.send(JSON.stringify(request));
+	} catch (err) {
+		document.getElementById("personAddResult").innerHTML = err.message;
+	}
+}
+
+// TODO: Add place to display result of delete
+function deleteContact(contactId) {
+	const request = {
+		contactId: contactId
+	};
+
+	const url = urlBase + '/DeleteContact.' + extension;
+
+	const xhr = new XMLHttpRequest();
+	xhr.open("POST", url, true);
+	xhr.setRequestHeader("Content-type", "application/json; charset=UTF-8");
+	try {
+		xhr.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				console.log("Contact has been deleted");
+				searchContacts();
+			}
+		};
+		xhr.send(JSON.stringify(request));
+	} catch (err) {
+		console.log(err.message);
+	}
+}
+
+// TODO: Add place to display result of update
+function updateContact(contactId) {
+	const editFirstName = document.getElementById("editFirstName").value;
+	const editLastName = document.getElementById("editLastName").value;
+	const editPhoneNumber = document.getElementById("editPhoneNumber").value;
+	const editEmail = document.getElementById("editEmail").value;
+
+	const request = {
+		firstName: editFirstName,
+		lastName: editLastName,
+		phone: editPhoneNumber,
+		email: editEmail,
+		contactId: contactId
+	};
+
+	const url = urlBase + '/UpdateContact.' + extension;
+
+	const xhr = new XMLHttpRequest();
+	xhr.open("POST", url, true);
+	xhr.setRequestHeader("Content-type", "application/json; charset=UTF-8");
+	try {
+		xhr.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				console.log("Contact has been updated");
+				searchContacts();
+			}
+		};
+		xhr.send(JSON.stringify(request));
+	} catch (err) {
+		console.log(err.message);
+	}
 }

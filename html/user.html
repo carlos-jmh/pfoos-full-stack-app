@@ -6,7 +6,7 @@
     <script type="text/javascript" src="./js/apiCalls.js"></script>
     <link rel="stylesheet" href="./css/styles.css">
 </head>
-<body class="secondBody font" onload="searchContacts()">
+<body class="secondBody font" onload="searchContacts();">
 
     <!-- Image of logo, company name, display name, logout button-->
     <div class="contentHeader">
@@ -33,7 +33,7 @@
             </div>
             
             <div class="addPerson">
-                <button tpye="button" id="addPersonButton" class="usrBtn" onclick="openAddPopup();">Add Person </button> <br>
+                <button type="button" id="addPersonButton" class="usrBtn" onclick="openAddPopup();">Add Person </button> <br>
                 <span id="personAddResult"></span>
             </div>
             
@@ -52,36 +52,34 @@
                     </tr>
                 </thead>
                 <tbody id="placeData">
-                    <!-- Idea, this submission will just call delete on the current contact, 
-                         and add a new contact with the inputted information.-->
                     <div class="Popup" id="editPop">
                         <button type="button" class="close" onclick="closeEditPopup()">X</button><br/>
                         <p>First Name</p>
-                        <input type="text" id="fname" placeholder="new first name"><br/>
+                        <input type="text" id="editFirstName" placeholder="new first name"><br/>
                         <p>Last Name</p>
-                        <input type="text" id="lname" placeholder="new last name"><br/>
+                        <input type="text" id="editLastName" placeholder="new last name"><br/>
                         <p>Phone Number</p>
-                        <input type="text" id="phone" placeholder="new phone number"><br/>
+                        <input type="text" id="editPhoneNumber" placeholder="new phone number"><br/>
                         <p>Email Address</p>
-                        <input type="text" id="email" placeholder="new email address"><br/>
-                        <button type="button" class="call">Submit</button>
+                        <input type="text" id="editEmail" placeholder="new email address"><br/>
+                        <button type="button" class="call" id="submitEditPopup">Submit</button>
                     </div>
                     <div class="Popup" id="deletePop">
                         <h2>Are you sure you want to delete this contact?</h2>
-                        <button type="button" onclick="deleteContact()">Delete</button>
+                        <button type="button" id="submitDeletePopup">Delete</button>
                         <button type="button" onclick="closeDeletePopup()">Don't delete</button>
                     </div>
                     <div class="Popup" id="addPop">
                         <button type="button" class="close" onclick="closeAddPopup()">X</button>
                         <p>First Name</p>
-                        <input type="text" placeholder="first name"><br/>
+                        <input type="text" id="addFirstName" placeholder="first name"><br/>
                         <p>Last Name</p>
-                        <input type="text" placeholder="last name"><br/>
+                        <input type="text" id="addLastName" placeholder="last name"><br/>
                         <p>Phone Number</p>
-                        <input type="text" placeholder="phone number"><br/>
+                        <input type="text" id="addPhoneNumber" placeholder="phone number"><br/>
                         <p>Email Address</p>
-                        <input type="text" placeholder="email address"><br/>
-                        <button type="button" onclick="addPerson()">Submit</button>
+                        <input type="text" id="addEmail" placeholder="email address"><br/>
+                        <button type="button" onclick="addContact(); closeAddPopup();">Submit</button>
                     </div>
                 </tbody>
             </table>
