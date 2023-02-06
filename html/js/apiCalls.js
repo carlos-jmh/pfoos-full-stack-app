@@ -112,6 +112,7 @@ function drawTable(contacts) {
 					btn.innerHTML = "edit";
 					btn.onclick = () => {
 						openEditPopup(contacts[i].contactId);
+						autoFillEditPopup(contacts[i]);
 					};
 				}
 				else {
@@ -145,6 +146,18 @@ function drawTable(contacts) {
 	};
 
 	return contacts;
+}
+
+function autoFillEditPopup(contact) {
+	const firstNameToEdit = document.getElementById("editFirstName");
+	const lastNameToEit = document.getElementById("editLastName");
+	const phoneToEdit = document.getElementById("editPhoneNumber");
+	const emailToEdit = document.getElementById("editEmail");
+
+	firstNameToEdit.value = contact.firstName;
+	lastNameToEit.value = contact.lastName;
+	phoneToEdit.value = contact.phone;
+	emailToEdit.value = contact.email;
 }
 
 function openEditPopup(contactId) {
