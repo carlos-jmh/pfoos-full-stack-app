@@ -155,15 +155,15 @@ li a:hover:not(.active)
 
 .buttons:hover
 {
-	background-color: black;
-	color: white;
+	background-color: var(--secondary-color);
+    color: white;
 }
 
 .buttons-dark
 {
     background-color: black;
     border-radius: 10px;
-    border: black solid 2px;
+    border: none;
     color: white;
     padding: 15px;
     font-family: youngserif;
@@ -172,8 +172,7 @@ li a:hover:not(.active)
 
 .buttons-dark:hover
 {
-	background-color: white;
-	color: black;
+	background-color: var(--main-color);
 }
 
 .active
@@ -242,28 +241,6 @@ li a:hover:not(.active)
     padding: 0 0 40px;
 }
 
-.logout:hover {
-    padding: 12px 30px;
-}
-
-.logout {
-    background-color: var(--secondary-color);
-    border: solid;
-    border-color: var(--secondary-color);
-    border-width: 2px;
-    color: var(--text-color);
-    border-radius: 8px;
-    padding: 8px 25px;
-}
-
-.usrBtn {
-    background-color: var(--secondary-color);
-    color: var(--text-color);
-    border: none;
-    border-radius: 8px;
-    padding: 8px 25px;
-}
-
 .usrBtn:hover {
     padding: 12px 30px;
 }
@@ -286,8 +263,8 @@ li a:hover:not(.active)
 }
 
 .styled-table thead tr {
-    background-color: var(--main-color);
-    color: #ffffff;
+    background-color: black;
+    color: white;
     text-align: left;
 }
 
@@ -297,7 +274,7 @@ li a:hover:not(.active)
 }
 
 .styled-table td {
-    color: var(--main-color);
+    color: black;
 }
 
 .styled-table tbody tr {
@@ -317,22 +294,10 @@ li a:hover:not(.active)
     color: var(--main-color);
 }
 
-.rowBtn {
-    background-color: var(--main-color);
-    border-color: var(--main-color);
-    border-radius: 8px;
-    color: var(--text-color);
-    padding: 8px 15px;
-}
-
-.rowBtn:hover {
-    padding: 12px 20px;
-}
-
 .Popup {
     width: 400px;
-    background-color: var(--main-color);
-    border-radius: 6px;
+    background-color: black;
+    border-radius: 15px;
     position: absolute;
     top: 0;
     left: 50%;
@@ -341,18 +306,6 @@ li a:hover:not(.active)
     padding: 0 30px 30px;
     visibility: hidden;
     transition: transform 0.4s, top 0.4s;
-}
-
-.Popup button {
-    border-radius: 6px;
-    background-color: var(--secondary-color);
-    color: var(--text-color);
-    border-color: var(--secondary-color);
-    padding: 8px 16px;
-}
-
-.Popup button:hover {
-    padding: 12px 30px;
 }
 
 .Popup .close {
