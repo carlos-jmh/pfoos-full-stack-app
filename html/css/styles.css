@@ -9,14 +9,13 @@
 {
   src: url(fonts/YoungSerif-Regular.otf);
   font-family: youngserif;
-
 }
 
 body
 {
   background: linear-gradient(45deg, #7286D3, #34385E, #E5E0FF);
   background-size: 1000% 1000%;
-  animation: GradientBackground 10s ease infinite;
+  animation: GradientBackground 30s ease infinite;
   font-family: youngserif;
   margin: 0px;
 }
@@ -203,7 +202,7 @@ li a:hover:not(.active)
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--main-color);
+    background-color: black;
     color: var(--text-color);
     height: 50px;
     margin: 10px 0 0;
@@ -211,7 +210,7 @@ li a:hover:not(.active)
 
 .contentHeader {
     height: 100px;
-    background-color: var(--main-color);
+    background-color: black;
     display: flex;
     justify-content: space-between;
     align-items: center;
