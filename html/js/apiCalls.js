@@ -57,11 +57,11 @@ function searchContacts() {
 
   const searchText = document.getElementById("searchText").value;
 
-  // loadData();
-  // if (userId <= 0) {
-  // 	window.location.href = "login.html";
-  // 	return;
-  // }
+  loadData();
+  if (userId <= 0) {
+    window.location.href = "login.html";
+    return;
+  }
 
   const request = { search: searchText, userId: userId };
   const url = urlBase + "/SearchContacts." + extension;
@@ -105,16 +105,16 @@ function drawTable(contacts) {
       // Create td with button inside.
       if (j == 5 || j == 6) {
         let btn = document.createElement("button");
-        btn.classList.add("buttons-dark");
+        btn.classList.add("buttons-secondary");
 
         if (j == 5) {
-          btn.innerHTML = "edit";
+          btn.innerHTML = "Edit";
           btn.onclick = () => {
             openEditPopup(contacts[i].contactId);
             autoFillEditPopup(contacts[i]);
           };
         } else {
-          btn.innerHTML = "delete";
+          btn.innerHTML = "Delete";
           btn.onclick = () => {
             openDeletePopup(contacts[i].contactId);
           };
