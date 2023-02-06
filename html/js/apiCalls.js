@@ -108,12 +108,13 @@ function drawTable(contacts) {
         btn.classList.add("buttons-dark");
 
         if (j == 5) {
-          btn.innerHTML = "Edit";
+          btn.innerHTML = "edit";
           btn.onclick = () => {
             openEditPopup(contacts[i].contactId);
+            autoFillEditPopup(contacts[i]);
           };
         } else {
-          btn.innerHTML = "Delete";
+          btn.innerHTML = "delete";
           btn.onclick = () => {
             openDeletePopup(contacts[i].contactId);
           };
@@ -140,6 +141,18 @@ function drawTable(contacts) {
   }
 
   return contacts;
+}
+
+function autoFillEditPopup(contact) {
+  const firstNameToEdit = document.getElementById("editFirstName");
+  const lastNameToEit = document.getElementById("editLastName");
+  const phoneToEdit = document.getElementById("editPhoneNumber");
+  const emailToEdit = document.getElementById("editEmail");
+
+  firstNameToEdit.value = contact.firstName;
+  lastNameToEit.value = contact.lastName;
+  phoneToEdit.value = contact.phone;
+  emailToEdit.value = contact.email;
 }
 
 function openEditPopup(contactId) {
