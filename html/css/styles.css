@@ -387,7 +387,6 @@ li a:hover:not(.active):not(.signup-button)
 /* Styling for the pricing page */
 .price-container{
     width: 100%;
-    min-height: 100vh;
 }
 .price-container h2{
     color: #000000;
