@@ -5,6 +5,26 @@ let userId = -1;
 let firstName = "";
 let lastName = "";
 
+// Submitting login and register when hitting enter on last input field
+window.addEventListener("load", function () {
+  const elementIds = [
+    ["loginPassword", "loginButton"],
+    ["registerLastName", "createAccButton"],
+  ];
+  for (let i = 0; i < elementIds.length; i++) {
+    const lastTextInput = document.getElementById(elementIds[i][0]);
+    const submitButton = document.getElementById(elementIds[i][1]);
+    if (lastTextInput && submitButton) {
+      lastTextInput.addEventListener("keypress", function (event) {
+        if (event.key === "Enter") {
+          event.preventDefault();
+          submitButton.click();
+        }
+      });
+    }
+  }
+});
+
 function doLogin() {
   const login = document.getElementById("loginName").value;
   const password = document.getElementById("loginPassword").value;
@@ -57,11 +77,11 @@ function searchContacts() {
 
   const searchText = document.getElementById("searchText").value;
 
-  loadData();
-  if (userId <= 0) {
-    window.location.href = "login.html";
-    return;
-  }
+  // loadData();
+  // if (userId <= 0) {
+  //   window.location.href = "login.html";
+  //   return;
+  // }
 
   const request = { search: searchText, userId: userId };
   const url = urlBase + "/SearchContacts." + extension;
